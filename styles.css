@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background {
+    width: auto;
+    height: 100vh;
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+}
+
+.logo{
+    background-image: url('');
+}
