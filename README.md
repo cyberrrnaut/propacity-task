@@ -8,6 +8,8 @@ Project Description:
 The project involves developing a landing page with a contact form that collects user data. Two main functionalities are implemented upon every contact form submission:
 
 Send data to Google Sheets
+Google Sheets Link : https://docs.google.com/spreadsheets/d/1VzxoVxghUzWgC7EGrp9clgyvFiS6SRYpmC_TMTfcFL0/edit#gid=0
+
 Send data to a specific API using a POST request
 The user interface is designed based on the specifications provided in the Figma design, ensuring accurate replication of design elements, layout, and responsiveness. The landing page is hosted on a specified domain.
 
