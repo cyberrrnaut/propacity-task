@@ -21,36 +21,38 @@ function submitForm(form, scriptURL, successRedirectURL) {
 const Apiurl =
   "https://api.propacity.in/api/v1/webhooks/integration/61cf0d44-1ede-4dfa-b3ce-9834102082/insertLead";
 
-///post req to the api endpoint  function
-
+// Post request to the API endpoint function
 function postToApi(form) {
   form.addEventListener("submit", (e) => {
-    e.preventDefault();
-  });
-  // Collecting the form data
-  const formData = new FormData(document.forms["contact-form"]);
+    e.preventDefault(); // Move this line inside the event listener
 
-  // Converting FormData to JSON
-  const jsonData = {};
-  formData.forEach((value, key) => {
-    jsonData[key] = value;
-  });
+    // Collecting the form data
+    const formData = new FormData(document.forms["contact-form"]);
 
-  // Sending data to the server using Fetch API
-  fetch(Apiurl, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(jsonData),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("Data:", data);
-    })
-    .catch((error) => {
-      console.error("Error:", error);
+    // Converting FormData to JSON
+    const jsonData = {};
+    formData.forEach((value, key) => {
+      jsonData[key] = value;
     });
+
+    // Sending data to the server using Fetch API
+    fetch(Apiurl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(jsonData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Data:", data);
+        // Handle the response data here
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        // Handle errors
+      });
+  });
 }
 
 ///declaring the constants for redirecting
