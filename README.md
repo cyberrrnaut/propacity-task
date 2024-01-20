@@ -46,7 +46,7 @@ Payload:
 
 #### Get item
 
-```https://api.propacity.in/api/v1/webhooks/integration/61cf0d44-1ede-4dfa-b3ce-9834102082/inser tLead 
+```https://api.propacity.in/api/v1/webhooks/integration/61cf0d44-1ede-4dfa-b3ce-9834102082/insertLead 
 
   GET /api/items/${id}
 ```
